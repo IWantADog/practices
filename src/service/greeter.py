@@ -3,7 +3,6 @@ import logging
 from grpc_python.greeter_pb2_grpc import GreeterServicer, add_GreeterServicer_to_server
 
 from grpc_python.greeter_pb2 import HelloReply
-from src.server import main_serverddddddddd
 
 
 class Greeter(GreeterServicer):

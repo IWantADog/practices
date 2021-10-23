@@ -1,15 +1,19 @@
-from concurrent import futures
 import logging
 import grpc
+from concurrent import futures
 
-logging.basicConfig()
+from src import register_service
+
 logger = logging.getLogger(__name__)
-main_server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+main_server = grpc.server(futures.ThreadPoolExecutor(max_workers=1))
 
 
 def serve():
+    logger.info("register all service")
+    register_service(main_server)
+
     logger.info("server start")
-    main_server.add_insecure_port('[::]:50051')
+    main_server.add_insecure_port('127.0.0.1:5000')
     main_server.start()
     main_server.wait_for_termination()
 
