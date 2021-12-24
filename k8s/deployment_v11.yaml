@@ -3,21 +3,21 @@ kind: Deployment
 metadata:
   name: hello-world
   labels:
-    app: test
+    app: hello-world
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: test
+      app: hello-world
   minReadySeconds: 10
   template:
     metadata:
       labels:
-        app: test
+        app: hello-world
     spec:
       containers:
       - name: hello-world
-        image: benjilee5453/hello-world:v3
+        image: benjilee5453/hello-world:v1.1
         ports:
         - containerPort: 5000
         readinessProbe:
@@ -30,3 +30,6 @@ spec:
             valueFrom:
               fieldRef:
                   fieldPath: metadata.name
+        command:
+          - cd /app
+          - python app.py

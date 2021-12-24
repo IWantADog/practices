@@ -1,4 +1,2 @@
-FROM python:3.9
-RUN pip install flask
-COPY app.py /app/app.py
-CMD [ "python", "/app/app.py" ]
+FROM benjilee5453/flask:v0.1.0
+COPY ./app.py /app/app.py
