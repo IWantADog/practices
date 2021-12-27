@@ -14,8 +14,11 @@ def health_check():
 	return "all is ok"
 
 def get_pod_name():
-	return os.environ.get("POD_NAME", "empty")
+	return os.environ.get("POD_NAME", None)
 
 
 if __name__ == '__main__':
+	env = get_pod_name()
+	if env is None:
+		raise ValueError("env is empty")
 	app.run(host='0.0.0.0', port=5000)
