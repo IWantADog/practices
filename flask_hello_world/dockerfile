@@ -1,2 +1,2 @@
 FROM benjilee5453/flask:v0.1.0
-COPY ./app.py /app/app.py
+COPY app.py /app/app.py
