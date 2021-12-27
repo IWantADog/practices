@@ -3,7 +3,7 @@ import time
 from flask import Flask
 
 app = Flask(__name__)
-version = 'v4'
+version = 'v1.2'
 
 @app.route("/")
 def index():
