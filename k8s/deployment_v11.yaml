@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: benjilee5453/hello-world:v1.1
+        image: benjilee5453/hello-world:v1.2.1
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
@@ -26,11 +26,12 @@ spec:
             path: /health_check
             port: 5000
           initialDelaySeconds: 3
+          periodSeconds: 3
         env:
           - name: POD_NAME
             valueFrom:
               fieldRef:
-                  fieldPath: metadata.name
+                fieldPath: metadata.name
         command:
           - sh
           - -c
