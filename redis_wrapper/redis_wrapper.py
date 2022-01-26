@@ -35,6 +35,7 @@ class RedisCacheWrapper:
         - args中存在None如何处理
             - 直接转化为字符串`str(None)`
         - 如何处理function中存在default的情况
+            - 通过inspect获取形参默认值
         """
         sig = signature(func)
         paramenter = sig.parameters
