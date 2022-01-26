@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "practices"
 version = "0.1.0"
-description = ""的
+description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
