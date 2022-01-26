@@ -1,11 +1,12 @@
 [tool.poetry]
-name = "grpc_practice"
+name = "practices"
 version = "0.1.0"
 description = ""
-authors = ["shuai.li <shuai.li@gamesvessel.com>"]
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+redis = "^4.1.1"
 grpcio = "^1.41.0"
 grpcio-tools = "^1.41.0"
 
