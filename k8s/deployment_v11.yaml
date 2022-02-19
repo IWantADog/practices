@@ -45,6 +45,10 @@ spec:
           - sh
           - -c
           - cd /app && python app.py
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
 
 ---
 
