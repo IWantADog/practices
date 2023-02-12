@@ -10,6 +10,7 @@ redis = "^4.1.1"
 grpcio = "^1.41.0"
 grpcio-tools = "^1.41.0"
 pymongo = "^4.3.2"
+flask = "^2.2.2"
 
 [tool.poetry.dev-dependencies]
 
@@ -19,4 +20,4 @@ build-backend = "poetry.core.masonry.api"
 
 [[tool.poetry.source]]
 name = "douban"
-url = "https://pypi.doubanio.com/"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
