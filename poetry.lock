@@ -130,6 +130,28 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 reference = "douban"
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+setuptools = ">=3.0"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[package.source]
+type = "legacy"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+reference = "douban"
+
+[[package]]
 name = "importlib-metadata"
 version = "4.10.1"
 description = "Read metadata from Python packages"
@@ -383,7 +405,7 @@ reference = "douban"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "37489e3e1bb97f204d7e95a21678c9cb62190b486f87b2d0aa3b337203b3a8bd"
+content-hash = "0a6344f35a88ac498a6a89a30eef92c666095ccbc492a653a37e924d059193c6"
 
 [metadata.files]
 click = [
@@ -497,6 +519,10 @@ grpcio-tools = [
     {file = "grpcio_tools-1.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:1adb0dbcc1c10b86dcda910b8f56e39210e401bcee923dba166ba923a5f4696a"},
     {file = "grpcio_tools-1.43.0-cp39-cp39-win32.whl", hash = "sha256:ebfb94ddb454a6dc3a505d9531dc81c948e6364e181b8795bfad3f3f479974dc"},
     {file = "grpcio_tools-1.43.0-cp39-cp39-win_amd64.whl", hash = "sha256:d21928b680e6e29538688cffbf53f3d5a53cff0ec8f0c33139641700045bdf1a"},
+]
+gunicorn = [
+    {file = "gunicorn-20.1.0-py3-none-any.whl", hash = "sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e"},
+    {file = "gunicorn-20.1.0.tar.gz", hash = "sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8"},
 ]
 importlib-metadata = [
     {file = "importlib_metadata-4.10.1-py3-none-any.whl", hash = "sha256:899e2a40a8c4a1aec681feef45733de8a6c58f3f6a0dbed2eb6574b4387a77b6"},
